@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Data;
 using System.Transactions;
+using ProjectPractice.Interface;
 using ProjectPractice.OOP;
+using ProjectPractice.OOP.Abstraction;
+using ProjectPractice.OOP.AccessSpecifiers;
+using ProjectPractice.OOP.Inheritance_Area;
+using ProjectPractice.OOP.Inheritance_Management;
+using ProjectPractice.OOP.Overriding;
 
 namespace ProjectPractice {
 
-    internal class Program {
+    internal class Program:AccessSpecifiers {
 
         static void Main(string[] args) {
 
@@ -95,8 +101,8 @@ namespace ProjectPractice {
                 int marks = Convert.ToInt32(Console.ReadLine());
                 std[i].Accept(rno, name, marks);
             }
-           
-           
+
+
             int max = 0;
             int stdIndex = 0;
             for (int i = 0; i < std.Length; i++) {
@@ -105,7 +111,7 @@ namespace ProjectPractice {
                     max= std[i].stdMarks;
                     stdIndex = i;
                 }
-            
+
             }
             Console.WriteLine("Maximum Marks are:{0}", max);
             std[stdIndex].Display();*/
@@ -122,7 +128,7 @@ namespace ProjectPractice {
             */
 
             /*Constructor Example
-             
+
 
             ConstructorExample example = new ConstructorExample(10, 20);
             ConstructorExample example1 = new ConstructorExample(example);
@@ -140,7 +146,7 @@ namespace ProjectPractice {
             example.Add(2.15f, 22.85f);
             */
 
-            /*Inheritance Example | Single | Multilevel | Hirarchical*/
+            /*Inheritance Example | Single | Multilevel | Hirarchical
 
             B obj1 = new B();
             obj1.fun2();
@@ -149,8 +155,76 @@ namespace ProjectPractice {
             C obj2 = new C();
             obj2.fun3();
             obj2.fun2();
-            obj2.fun1();
+            obj2.fun1();*/
+
+            /*Inheritance Assignment | Area of circle | Rectangle | Triangle
+
+            //Circle obj1 = new Circle();
+            //obj1.Accept1(5);
+            //obj1.CircleArea();
+            //obj1.Display();
+
+            Rectangle obj2 = new Rectangle();
+            obj2.Accept1(5);
+            obj2.Accept2(6);
+            obj2.CircleArea();
+            obj2.Display();
+            obj2.RectangleArea();
+            obj2.Display();
+
+            Triangle obj3 = new Triangle();
+            obj3.Accept1(5);
+            obj3.Accept2(6);
+            obj3.TriangleArea();
+            obj3.Display();*/
+
+
+            /*Inheritance Assignment | Admin | Manager | Employee
+
+                        Employee emp = new Employee();
+                        emp.GetEmployeeData();
+                        Console.WriteLine("\n Employee Details:");
+                        emp.ShowEmployeeData();*/
+
+            /*Abstraction  | AbstractArea | AbstractChildArea
+
+            AbstractArea area = new AbstractChildArea();
+            area.Accept(10, 20);
+            area.triangle();
+            area.Display();
+
+            AbstractArea area1 = new AbstractChildArea();
+            area1.Accept(10, 20); 
+            area1.rectangle();
+            area1.Display();*/
+
+            /*Acceess Specifiers | private | internal | protected | protected internal | public 
+            
+            Program obj3 = new Program();
+            obj3.fun2();
+            obj3.fun3();
+            obj3.fun4();
+            obj3.fun5();
+            */
+
+            /*Interface Implement | 
+            IFirst first = new InterfaceImplement();
+            first.fun1();
+            first.fun2();
+            ISecond second = new InterfaceImplement();
+            second.fun1();
+            second.fun2();
+            second.fun3();*/
+
+            /*Overriding */
+            Bill bill = new GSTBill();
+            Console.WriteLine(bill.CalcBill(1000));
+
+            /*Overhiding*/
+            Bill bill1 = new GSTBill();
+            bill1.CalcBill(1000);
+            Console.WriteLine(bill1.CalcBill(1000));
         }
 
-    }
+}
 }
