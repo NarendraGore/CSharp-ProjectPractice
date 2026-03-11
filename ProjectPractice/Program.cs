@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Data;
+using System.Security.Cryptography;
 using System.Transactions;
+using ProjectPractice.Collections;
 using ProjectPractice.Interface;
 using ProjectPractice.OOP;
 using ProjectPractice.OOP.Abstraction;
 using ProjectPractice.OOP.AccessSpecifiers;
+using ProjectPractice.OOP.FileHandling;
 using ProjectPractice.OOP.Inheritance_Area;
 using ProjectPractice.OOP.Inheritance_Management;
 using ProjectPractice.OOP.Overriding;
@@ -224,6 +227,19 @@ namespace ProjectPractice {
             Bill bill1 = new GSTBill();
             bill1.CalcBill(1000);
             Console.WriteLine(bill1.CalcBill(1000));
+
+            /*File Operations | Create File | Write File | Read File |Append File
+            FileOperations fs = new FileOperations();
+            //fs.CreateFile();
+            //fs.AddContentOnFile();
+            //fs.AppendContentOnFile();
+            //fs.ReadContentOnFile();
+            fs.DeleteFileOperation();*/
+
+            /*Collections*/
+            
+            ArrayListExample example = new ArrayListExample();
+            example.HashTableFun();
         }
 
 }
